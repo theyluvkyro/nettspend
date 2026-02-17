@@ -1,0 +1,429 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 100vh;
+    background: #000;
+    border-right: 1px solid #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    gap: 30px;
+    z-index: 1000;
+}
+
+.nav-icon {
+    color: #666;
+    transition: color 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav-icon:hover,
+.nav-icon.active {
+    color: #fff;
+}
+
+/* Main Content */
+.content {
+    margin-left: 80px;
+    min-height: 100vh;
+    padding: 60px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 120px);
+    gap: 80px;
+}
+
+.hero-image {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    border: 2px solid #fff;
+    filter: grayscale(100%) contrast(1.1);
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.glitch {
+    font-size: 72px;
+    font-weight: 900;
+    letter-spacing: 8px;
+    position: relative;
+    animation: glitch 3s infinite;
+}
+
+@keyframes glitch {
+    0%, 100% {
+        text-shadow: 2px 2px #ff00de, -2px -2px #00fff9;
+    }
+    25% {
+        text-shadow: -2px -2px #ff00de, 2px 2px #00fff9;
+    }
+    50% {
+        text-shadow: 2px -2px #ff00de, -2px 2px #00fff9;
+    }
+    75% {
+        text-shadow: -2px 2px #ff00de, 2px -2px #00fff9;
+    }
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #888;
+    margin-top: 20px;
+    letter-spacing: 4px;
+    text-transform: lowercase;
+}
+
+/* Page Header */
+.page-header {
+    margin-bottom: 60px;
+}
+
+.page-header h1 {
+    font-size: 64px;
+    font-weight: 900;
+    letter-spacing: 8px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 20px;
+}
+
+/* Dates Page */
+.dates-container {
+    max-width: 1200px;
+}
+
+.date-section {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.date-title {
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+}
+
+.date-main {
+    font-size: 96px;
+    font-weight: 900;
+    letter-spacing: 10px;
+    margin: 20px 0;
+}
+
+.date-description {
+    font-size: 24px;
+    color: #888;
+    letter-spacing: 4px;
+}
+
+.tour-section {
+    border-top: 2px solid #333;
+    padding-top: 60px;
+}
+
+.tour-title {
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.tour-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+}
+
+.tour-dates {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.tour-date {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+}
+
+.tour-date:hover {
+    border-color: #fff;
+    background: #111;
+}
+
+.tour-date .date {
+    font-weight: 700;
+    font-family: monospace;
+    letter-spacing: 2px;
+}
+
+.tour-date .city {
+    color: #888;
+}
+
+.tour-note {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-top: 40px;
+}
+
+/* Links Page */
+.links-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.album-cover {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.album-cover img {
+    max-width: 500px;
+    width: 100%;
+    border: 2px solid #fff;
+}
+
+.links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 80px;
+}
+
+.link-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    border: 2px solid #333;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    transition: all 0.3s ease;
+}
+
+.link-item:hover {
+    border-color: #fff;
+    background: #111;
+    transform: translateX(10px);
+}
+
+.link-arrow {
+    font-size: 32px;
+    transition: transform 0.3s ease;
+}
+
+.link-item:hover .link-arrow {
+    transform: translateX(10px);
+}
+
+.contact-info {
+    text-align: center;
+    padding: 40px;
+    border-top: 2px solid #333;
+}
+
+.phone-number {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin: 10px 0;
+    font-family: monospace;
+}
+
+.website {
+    font-size: 18px;
+    color: #888;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+/* Music Page */
+.music-container {
+    max-width: 1200px;
+}
+
+.video-section {
+    margin-bottom: 80px;
+}
+
+.video-section h2 {
+    font-size: 36px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+
+.video-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-wrapper video {
+    width: 100%;
+    border: 2px solid #fff;
+}
+
+.album-info {
+    margin-bottom: 80px;
+    padding: 40px;
+    border: 2px solid #333;
+    text-align: center;
+}
+
+.album-title {
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 6px;
+    margin-bottom: 15px;
+}
+
+.album-date {
+    font-size: 24px;
+    color: #888;
+    margin-bottom: 30px;
+    letter-spacing: 3px;
+}
+
+.album-description {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #aaa;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.snippets-list {
+    padding: 40px;
+    border-top: 2px solid #333;
+}
+
+.snippets-list h3 {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.snippet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.snippet-item {
+    padding: 20px;
+    border: 1px solid #333;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.snippet-item:hover {
+    border-color: #fff;
+    background: #111;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+    
+    .glitch {
+        font-size: 48px;
+    }
+    
+    .content {
+        padding: 40px 30px;
+    }
+    
+    .page-header h1 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+        padding-top: 20px;
+        gap: 20px;
+    }
+    
+    .nav-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .content {
+        margin-left: 60px;
+        padding: 30px 20px;
+    }
+    
+    .glitch {
+        font-size: 36px;
+        letter-spacing: 4px;
+    }
+    
+    .page-header h1 {
+        font-size: 36px;
+        letter-spacing: 4px;
+    }
+    
+    .date-main {
+        font-size: 64px;
+    }
+    
+    .tour-dates {
+        grid-template-columns: 1fr;
+    }
+    
+    .link-item {
+        font-size: 18px;
+        padding: 20px;
+    }
+    
+    .snippet-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
